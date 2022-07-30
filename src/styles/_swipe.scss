@@ -1,0 +1,19 @@
+.Header_burg__body__o9VmE.active {
+    top: 0;
+}
+.Header_burg__tog__tZbKi.active::before {
+    transform: rotate(45deg);
+    top: 9px;
+}
+.Header_burg__tog__tZbKi.active::after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+}
+.Header_burg__tog__tZbKi.active span {
+    transform: scale(0);
+}
+@media screen and (max-width: 780px) {
+    body.lock {
+        overflow: hidden;
+    }
+}

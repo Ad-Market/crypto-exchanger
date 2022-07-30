@@ -1,0 +1,235 @@
+/** ----------------- content ----------------- */
+.content {
+    width: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+}
+.content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    z-index: 2;
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0px 10px;
+}
+
+.body {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.menu {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+}
+
+/** ----------------- logo ----------------- */
+
+.logo__link {
+    display: flex;
+    text-decoration: none;
+    color: #b5b5b5;
+    z-index: 3;
+}
+
+.logo {
+    height: 40px;
+    width: 40px;
+    background: url('/src/image/cryptocurrency-73.svg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.logo::after {
+    content: '';
+    position: absolute;
+    height: 40px;
+    right: -10px;
+    border-right: 2px solid #2D6CDF;
+}
+
+.logo__text {
+    margin-left: 20px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+
+    pointer-events: none;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none; 
+}
+
+.logo__text span {
+    font-size: 15px;
+}
+
+/** ----------------- select ----------------- */
+
+.lang__menu {
+    position: relative;
+    z-index: 3;
+}
+
+.selected__lang {
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.selected__lang.eng {
+    background-image: url(/src/image/en.svg);
+}
+.selected__lang.rus {
+    background-image: url(/src/image/ru.svg);
+}
+
+.selected__list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 999;
+    top: 75px;
+
+    overflow: hidden;
+    background: #fff;
+    border-top: 6px solid #2D6CDF;
+    border-radius: 5px;
+    box-shadow: 0 1px 7px 0 rgb(0 0 0 / 50%);
+}
+
+.en, .ru {
+    list-style-type: none;
+    margin: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.en{
+    background-image: url(/src/image/en.svg);
+}
+
+.ru{
+    background-image: url(/src/image/ru.svg);
+}
+
+/** ----------------- select ----------------- */
+
+.burg__body.active {
+background-color: #2D6CDF;
+}
+
+.burg__tog.active {
+    background-color: #2D6CDF;
+}
+
+.burg__tog {
+    display: none;
+}
+
+.burg__list {
+    display: flex;
+    position: relative;
+    z-index: 3;
+
+}
+.burg__list li {
+    list-style: none;
+    margin: 0 0 0 20px;
+}
+.burg__link {
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #b5b5b5;
+}
+
+/** ----------------- media ------------------ */
+
+
+@media screen and (max-width: 780px){
+    .body {
+        height: 60px;
+    }
+    .burg__tog {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 3;
+    }
+    .burg__tog span {
+        position: absolute;
+        width: 100%;
+        background-color: #b5b5b5;
+        left: 0;
+        height: 2px;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+    }
+    .burg__tog::before,
+    .burg__tog::after {
+        content: '';
+        background-color: #b5b5b5;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+    .burg__tog::before {
+        top: 0;
+    }
+    .burg__tog::after {
+        bottom: 0;
+    }
+
+    .burg__body {
+        z-index: 1;
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(79, 79, 79);
+        padding: 100px 10px 20px 10px;
+        transition: all 0.5s ease 0s;
+        display: flex;
+        justify-content: center;
+        overflow: auto;
+    }
+    .burg__list {
+        display: block;
+        
+    }
+    .burg__list li {
+        margin: 0 0 20px 0 ;
+    }
+}

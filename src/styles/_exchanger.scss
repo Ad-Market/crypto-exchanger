@@ -1,0 +1,23 @@
+.main__exchanger {
+    & button {
+        background-color:aqua;
+        width: 100px;
+        height: 50px;
+    }
+    & input {
+        height: 50px;
+        border: 1px solid black;
+    }
+    & input:valid,
+    input:focus:valid {
+        border-color: green;
+        color: green;
+        box-shadow: none;
+    }
+    & input:invalid,
+    input:focus:invalid {
+        border-color: red;
+        color: red;
+        box-shadow: none;
+    }
+}
