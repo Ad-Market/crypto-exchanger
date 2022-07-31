@@ -7,7 +7,6 @@ const Main = () => {
 
     return (
         <div className='main__content'>
-            {t('text.part1')}
             <Exchanger/>
         </div>
     )

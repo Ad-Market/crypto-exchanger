@@ -4,7 +4,7 @@ import { baseURL } from "../global/globalValues";
 export default class API extends React.Component {
 
     static async getAll() {
-        const responce = await fetch( baseURL + '/apitest', {
+        const responce = await fetch( baseURL + '/coins', {
           method: 'GET', // *GET, POST, PUT, DELETE, etc.
         });
         const tokens = await responce.json();
@@ -12,30 +12,13 @@ export default class API extends React.Component {
         return tokens;
     }
 
-    static async getMovieById(id) {
-        const responce = await fetch( baseURL + '/' + id, {
-          method: 'GET', // *GET, POST, PUT, DELETE, etc.
+    static async getToken ( of, to, amount ) {
+        const responce = await fetch ( baseURL + `/?from=${of}&to=${to}&amount=${amount}`, {
+            method: 'GET',
         });
-        const movieById = await responce.json();
-        console.log(movieById);
-        return movieById;
-    }
-    
-    static async postCurrcy ( data ) {
-        const response = await fetch(baseURL + '/postcurrcy', {
-            method: 'POST', // *GET, POST, PUT, DELETE, etc.
-            body: data
-        });
-        console.log('postStatus>>>' + response);
-        return await response.json();
+        const tokens = await responce.json();
+        console.log(tokens);
+        return tokens;
     }
 
-    // static async getCurrcy() {
-    //     const responce = await fetch( baseURL + '/getcurrcy', {
-    //       method: 'GET', // *GET, POST, PUT, DELETE, etc.
-    //     });
-    //     const token = await responce.json();
-    //     console.log(token);
-    //     return token;
-    // }
 }

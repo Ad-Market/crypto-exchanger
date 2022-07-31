@@ -1,23 +1,122 @@
 .main__exchanger {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 40px;
+
     & button {
-        background-color:aqua;
-        width: 100px;
-        height: 50px;
+        color: white;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #2D6CDF;
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #327aff;
+        }
+    }
+}
+
+.exchanger__form {
+    margin: 35px 70px 35px 70px;
+}
+
+.exchanger__sent {
+
+    display: flex;
+    width: 100%;
+    align-items: center;
+    border-color: hsl(0, 0%, 80%);
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    height: 100px;
+    font-size: 24px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.exchanger__sent-control {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    & span {
+        width: 100%;
+        font-size: 14px;
+        margin-bottom: 10px;
     }
     & input {
-        height: 50px;
-        border: 1px solid black;
+        width: 100%;
     }
-    & input:valid,
-    input:focus:valid {
-        border-color: green;
-        color: green;
-        box-shadow: none;
+}
+
+.exchanger__sent-amount {
+    padding-left: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.exchanger__img-sent {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    background-image: url(../../image/bitcoin.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.exchanger__img-get {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    background-image: url(../../image/ethereum.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.exchanger__select {
+    width: 150px;
+    & input {
+        height: 70px;
     }
-    & input:invalid,
-    input:focus:invalid {
-        border-color: red;
-        color: red;
-        box-shadow: none;
+    & div {
+        border-radius: none;
+        border-style: none;
+        border-width: none;
+        font-size: 14px;
     }
+
+}
+
+.exchanger__massage {
+    padding: 5px 15px 5px 10px;
+    color: #5e5e5e;
+    background-color: #b5b5b5;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.exchanger__payment {
+    width: 100%;
+    display: flex;
+    padding: 5px 15px 5px 10px;
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+
+    border-color: hsl(0, 0%, 80%);
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.exchanger__button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }

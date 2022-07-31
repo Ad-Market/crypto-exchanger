@@ -1,5 +1,19 @@
 {
     "text": {
         "part1":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, assumenda! Ex fuga quod quidem possimus voluptates itaque quia, molestiae consequuntur nostrum expedita consequatur aliquam assumenda commodi magnam sed! Non, provident."
+    },
+    "exchanger": {
+        "maxAmount":"max amount:",
+        "minAmount":"min amount:",
+        "send":"you send:",
+        "get": "you get:",
+        "button":"Exchange",
+        "enter": "Enter amount",
+        "title": "Use number format",
+        "titlePayment": "Enter crypto payout",
+        "payout": "Enter the payout adress",
+        "same1": "Same-coin pairs allow you to privately send transactions while hiding your balance and history from a recipient.",
+        "same2": "Note: these transactions may still be subject to AML/KYC screening.",
+        "wallet": "Recipient Wallet"
     }
 }
