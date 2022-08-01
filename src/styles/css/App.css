@@ -75,6 +75,12 @@ body {
           justify-content: center;
 }
 
+@media screen and (max-width: 780px) {
+  .main__content {
+    margin-top: 100px;
+  }
+}
+
 .main__exchanger {
   width: 100%;
   max-width: 600px;
@@ -117,7 +123,7 @@ body {
   border-width: 1px;
   height: 100px;
   font-size: 24px;
-  padding: 5px;
+  padding-left: 5px;
   margin-bottom: 20px;
 }
 
@@ -153,8 +159,9 @@ body {
   width: 32px;
   height: 32px;
   margin-right: 10px;
-  background-image: url(../../image/bitcoin.svg);
+  background-image: url(../../image/get/tether.svg);
   background-repeat: no-repeat;
+  background-size: contain;
   background-position: center;
 }
 
@@ -162,8 +169,9 @@ body {
   width: 32px;
   height: 32px;
   margin-right: 10px;
-  background-image: url(../../image/ethereum.svg);
+  background-image: url(../../image/get/usdc.svg);
   background-repeat: no-repeat;
+  background-size: contain;
   background-position: center;
 }
 
@@ -172,7 +180,7 @@ body {
 }
 
 .exchanger__select input {
-  height: 70px;
+  height: 84px;
 }
 
 .exchanger__select div {
@@ -180,14 +188,6 @@ body {
   border-style: none;
   border-width: none;
   font-size: 14px;
-}
-
-.exchanger__massage {
-  padding: 5px 15px 5px 10px;
-  color: #5e5e5e;
-  background-color: #b5b5b5;
-  border-radius: 5px;
-  margin-bottom: 20px;
 }
 
 .exchanger__payment {
@@ -213,6 +213,28 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (max-width: 780px) {
+  .exchanger__form {
+    margin: 25px 60px 25px 60px;
+  }
+  .exchanger__sent {
+    height: 80px;
+    font-size: 18px;
+  }
+  .exchanger__select {
+    width: 150px;
+  }
+  .exchanger__select input {
+    height: 64px;
+  }
+  .exchanger__select div {
+    border-radius: none;
+    border-style: none;
+    border-width: none;
+    font-size: 12px;
+  }
 }
 
 .footer {

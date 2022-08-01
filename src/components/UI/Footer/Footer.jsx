@@ -17,7 +17,7 @@ function Footer() {
                 <div>
                 © Crypto Exchanger – 2022
                 </div>
-                <a href="https://t.me/+V3lSMHyEGO0xMTli">
+                <a href="/">
                     <div className="telegramm" ></div>
                 </a>
             </div>
